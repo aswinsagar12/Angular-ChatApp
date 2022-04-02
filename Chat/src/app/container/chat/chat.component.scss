@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 97vh;
+  width: 99vw;
+  border-radius: 35px;
+  background-color: #0f0e13;
+
+  h1 {
+    margin: 0.5em auto;
+    color: #fff;
+    text-align: center;
+  }
+}
+.chatbox {
+  background: #23242a;
+  width: 70%;
+  height: 75%;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.1);
+  .messages_list {
+    overflow-y: auto;
+    height: 100%;
+  }
+  &__messages {
+    &.mine .message-box {
+      float: right;
+    }
+    .message-box {
+      float: left;
+    }
+  }
+  .message-box {
+    background: rgba(99, 99, 99, 0.493);
+    padding: 1em 0;
+    height: auto;
+    width: 55%;
+    border-radius: 15px;
+    margin: 2em 1em;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    & > p.name {
+      color: #3f8cff;
+      font-size: 1em;
+    }
+    & > p.message {
+      color: rgb(222, 221, 221);
+      font-size: 0.7em;
+      margin: 0 2.8em;
+    }
+  }
+  &__user-list {
+    background: rgba(255, 255, 255, 0.1);
+    width: 25%;
+    height: 100%;
+    float: right;
+    border-radius: 15px;
+
+    h1 {
+      margin-top: 80px;
+
+      color: rgba(255, 255, 255, 0.9);
+
+      padding: 0.5em;
+      margin: 0;
+      font-weight: 300;
+      text-align: center;
+    }
+  }
+  &__user {
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 100%;
+    margin: 1em 0.7em;
+    &--active {
+      @extend .chatbox__user;
+      background: rgba(0, 250, 17, 0.8);
+    }
+  }
+  p {
+    float: left;
+    text-align: left;
+    margin: -0.25em 2em;
+    font-size: 1em;
+    font-weight: 300;
+    color: #fff;
+    width: 200px;
+  }
+  form {
+    background: #222;
+    input {
+      background: rgba(255, 255, 255, 0.03);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border: none;
+      width: 75%;
+      padding: 1.2em;
+      outline: none;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 300;
+
+    }
+  }
+}
+button{
+  color: #fff;
+  background-color: #3f8cff;
+
+  text-transform: capitalize;
+  width: 5rem;
+
+}
