@@ -8,5 +8,11 @@
     "start": "node server.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongodb": "^4.4.1",
+    "mongoose": "^6.2.9",
+    "socket.io": "^4.4.1"
+  }
 }
